@@ -57,7 +57,7 @@ public class RequestProcessor implements Runnable {
                 if (tokens.length > 2) {
                     version = tokens[2];
                 }
-                File theFile = new File(rootDirectory, fileName.substring(1, fileName.length()));
+                File theFile = new File(rootDirectory, fileName.substring(1));
                 if (theFile.canRead()
 // Don't let clients outside the document root
                         && theFile.getCanonicalPath().startsWith(root)) {
